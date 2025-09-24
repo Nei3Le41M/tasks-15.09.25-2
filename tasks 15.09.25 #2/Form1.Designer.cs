@@ -28,40 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            buttonUsdToKzt = new Button();
-            buttonKztToUsd = new Button();
             textBox1 = new TextBox();
             labelResult = new Label();
+            comboBox1 = new ComboBox();
+            button1 = new Button();
             SuspendLayout();
-            // 
-            // buttonUsdToKzt
-            // 
-            buttonUsdToKzt.Font = new Font("Segoe UI Historic", 10F, FontStyle.Regular, GraphicsUnit.Point, 10);
-            buttonUsdToKzt.Location = new Point(162, 205);
-            buttonUsdToKzt.Name = "buttonUsdToKzt";
-            buttonUsdToKzt.Size = new Size(192, 52);
-            buttonUsdToKzt.TabIndex = 0;
-            buttonUsdToKzt.Text = "Доллары в тенге";
-            buttonUsdToKzt.UseVisualStyleBackColor = true;
-            buttonUsdToKzt.Click += buttonUsdToKzt_Click;
-            // 
-            // buttonKztToUsd
-            // 
-            buttonKztToUsd.Font = new Font("Segoe UI Historic", 10F, FontStyle.Regular, GraphicsUnit.Point, 10);
-            buttonKztToUsd.Location = new Point(454, 205);
-            buttonKztToUsd.Name = "buttonKztToUsd";
-            buttonKztToUsd.Size = new Size(189, 53);
-            buttonKztToUsd.TabIndex = 1;
-            buttonKztToUsd.Text = "Тенге в Доллары";
-            buttonKztToUsd.UseVisualStyleBackColor = true;
-            buttonKztToUsd.Click += buttonKztToUsd_Click;
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.ForestGreen;
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Segoe UI Historic", 15F);
-            textBox1.Location = new Point(291, 117);
+            textBox1.Location = new Point(27, 186);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(237, 41);
+            textBox1.Size = new Size(233, 41);
             textBox1.TabIndex = 2;
             textBox1.TextAlign = HorizontalAlignment.Center;
             // 
@@ -69,7 +49,8 @@
             // 
             labelResult.AutoSize = true;
             labelResult.Font = new Font("Segoe UI Historic", 15F);
-            labelResult.Location = new Point(151, 25);
+            labelResult.ForeColor = SystemColors.ButtonFace;
+            labelResult.Location = new Point(144, 25);
             labelResult.Name = "labelResult";
             labelResult.Size = new Size(81, 35);
             labelResult.TabIndex = 3;
@@ -77,15 +58,39 @@
             labelResult.TextAlign = ContentAlignment.TopCenter;
             labelResult.Click += labelResult_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.BackColor = Color.ForestGreen;
+            comboBox1.FlatStyle = FlatStyle.Popup;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(31, 120);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(229, 28);
+            comboBox1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.ForestGreen;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Segoe UI", 12F);
+            button1.Location = new Point(35, 278);
+            button1.Name = "button1";
+            button1.Size = new Size(229, 115);
+            button1.TabIndex = 5;
+            button1.Text = "Конвертировать";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(0, 64, 64);
             ClientSize = new Size(823, 450);
+            Controls.Add(button1);
+            Controls.Add(comboBox1);
             Controls.Add(labelResult);
             Controls.Add(textBox1);
-            Controls.Add(buttonKztToUsd);
-            Controls.Add(buttonUsdToKzt);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -94,10 +99,9 @@
         }
 
         #endregion
-
-        private Button buttonUsdToKzt;
-        private Button buttonKztToUsd;
         private TextBox textBox1;
         private Label labelResult;
+        private ComboBox comboBox1;
+        private Button button1;
     }
 }
